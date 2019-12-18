@@ -1,0 +1,286 @@
+{
+  "settings" : {
+    "csv.first.row.as.header" : "true"
+  },
+  "offset" : { },
+  "keySchema" : {
+    "name" : "se.danold.UserKey",
+    "type" : "STRUCT",
+    "isOptional" : false,
+    "fieldSchemas" : {
+      "id" : {
+        "type" : "INT64",
+        "isOptional" : false
+      }
+    }
+  },
+  "valueSchema" : {
+    "name" : "se.danold.User",
+    "type" : "STRUCT",
+    "isOptional" : false,
+    "fieldSchemas" : {
+      "id" : {
+        "type" : "INT64",
+        "parameters" : {
+          "flr.length" : 7
+        },
+        "isOptional" : false
+      },
+      "name" : {
+        "type" : "STRING",
+        "parameters" : {
+          "flr.length" : 20
+        },
+        "isOptional" : true
+      },
+      "wild_string" : {
+        "type" : "STRING",
+        "parameters" : {
+          "flr.length" : 30
+        },
+        "isOptional" : true
+      }
+    }
+  },
+  "expected" : [ {
+    "sourcePartition" : {
+      "fileName" : "FieldsMatch.flr"
+    },
+    "sourceOffset" : {
+      "offset" : 1
+    },
+    "topic" : "testing",
+    "keySchema" : {
+      "name" : "se.danold.UserKey",
+      "type" : "STRUCT",
+      "isOptional" : false,
+      "fieldSchemas" : {
+        "id" : {
+          "type" : "INT64",
+          "isOptional" : false
+        }
+      }
+    },
+    "key" : {
+      "schema" : {
+        "name" : "se.danold.UserKey",
+        "type" : "STRUCT",
+        "isOptional" : false,
+        "fieldSchemas" : {
+          "id" : {
+            "type" : "INT64",
+            "isOptional" : false
+          }
+        }
+      },
+      "fieldValues" : [ {
+        "name" : "id",
+        "schema" : {
+          "type" : "INT64",
+          "isOptional" : false
+        },
+        "storage" : 234
+      } ]
+    },
+    "valueSchema" : {
+      "name" : "se.danold.User",
+      "type" : "STRUCT",
+      "isOptional" : false,
+      "fieldSchemas" : {
+        "id" : {
+          "type" : "INT64",
+          "parameters" : {
+            "flr.length" : 7
+          },
+          "isOptional" : false
+        },
+        "name" : {
+          "type" : "STRING",
+          "parameters" : {
+            "flr.length" : 20
+          },
+          "isOptional" : true
+        },
+        "wild_string" : {
+          "type" : "STRING",
+          "parameters" : {
+            "flr.length" : 30
+          },
+          "isOptional" : true
+        }
+      }
+    },
+    "value" : {
+      "schema" : {
+        "name" : "se.danold.User",
+        "type" : "STRUCT",
+        "isOptional" : false,
+        "fieldSchemas" : {
+          "id" : {
+            "type" : "INT64",
+            "parameters" : {
+              "flr.length" : 7
+            },
+            "isOptional" : false
+          },
+          "name" : {
+            "type" : "STRING",
+            "parameters" : {
+              "flr.length" : 20
+            },
+            "isOptional" : true
+          },
+          "wild_string" : {
+            "type" : "STRING",
+            "parameters" : {
+              "flr.length" : 30
+            },
+            "isOptional" : true
+          }
+        }
+      },
+      "fieldValues" : [ {
+        "name" : "id",
+        "schema" : {
+          "type" : "INT64",
+          "isOptional" : false
+        },
+        "storage" : 234
+      }, {
+        "name" : "name",
+        "schema" : {
+          "type" : "STRING",
+          "isOptional" : true
+        },
+        "storage" : "Kalle Kula"
+      }, {
+        "name" : "wild_string",
+        "schema" : {
+          "type" : "STRING",
+          "isOptional" : true
+        },
+        "storage" : "aölsjfieothslräxnqji  slejdone"
+      } ]
+    }
+  }, {
+    "sourcePartition" : {
+      "fileName" : "FieldsMatch.flr"
+    },
+    "sourceOffset" : {
+      "offset" : 2
+    },
+    "topic" : "testing",
+    "keySchema" : {
+      "name" : "se.danold.UserKey",
+      "type" : "STRUCT",
+      "isOptional" : false,
+      "fieldSchemas" : {
+        "id" : {
+          "type" : "INT64",
+          "isOptional" : false
+        }
+      }
+    },
+    "key" : {
+      "schema" : {
+        "name" : "se.danold.UserKey",
+        "type" : "STRUCT",
+        "isOptional" : false,
+        "fieldSchemas" : {
+          "id" : {
+            "type" : "INT64",
+            "isOptional" : false
+          }
+        }
+      },
+      "fieldValues" : [ {
+        "name" : "id",
+        "schema" : {
+          "type" : "INT64",
+          "isOptional" : false
+        },
+        "storage" : 235
+      } ]
+    },
+    "valueSchema" : {
+      "name" : "se.danold.User",
+      "type" : "STRUCT",
+      "isOptional" : false,
+      "fieldSchemas" : {
+        "id" : {
+          "type" : "INT64",
+          "parameters" : {
+            "flr.length" : 7
+          },
+          "isOptional" : false
+        },
+        "name" : {
+          "type" : "STRING",
+          "parameters" : {
+            "flr.length" : 20
+          },
+          "isOptional" : true
+        },
+        "wild_string" : {
+          "type" : "STRING",
+          "parameters" : {
+            "flr.length" : 30
+          },
+          "isOptional" : true
+        }
+      }
+    },
+    "value" : {
+      "schema" : {
+        "name" : "se.danold.User",
+        "type" : "STRUCT",
+        "isOptional" : false,
+        "fieldSchemas" : {
+          "id" : {
+            "type" : "INT64",
+            "parameters" : {
+              "flr.length" : 7
+            },
+            "isOptional" : false
+          },
+          "name" : {
+            "type" : "STRING",
+            "parameters" : {
+              "flr.length" : 20
+            },
+            "isOptional" : true
+          },
+          "wild_string" : {
+            "type" : "STRING",
+            "parameters" : {
+              "flr.length" : 30
+            },
+            "isOptional" : true
+          }
+        }
+      },
+      "fieldValues" : [ {
+        "name" : "id",
+        "schema" : {
+          "type" : "INT64",
+          "isOptional" : false
+        },
+        "storage" : 235
+      }, {
+        "name" : "name",
+        "schema" : {
+          "type" : "STRING",
+          "isOptional" : true
+        },
+        "storage" : "Rutger Jönåker"
+      }, {
+        "name" : "wild_string",
+        "schema" : {
+          "type" : "STRING",
+          "isOptional" : true
+        },
+        "storage" : "aödöflkjasöfdhsenqji  hgfhfghg"
+      } ]
+    }
+  } ]
+}

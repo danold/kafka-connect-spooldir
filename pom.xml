@@ -33,6 +33,9 @@
     </description>
     <url>https://github.com/jcustenborder/kafka-connect-spooldir</url>
     <inceptionYear>2016</inceptionYear>
+    <properties>
+        <connect-utils.version>0.4.157</connect-utils.version>
+    </properties>
     <licenses>
         <license>
             <name>Apache License 2.0</name>
